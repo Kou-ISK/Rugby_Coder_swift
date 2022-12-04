@@ -16,6 +16,7 @@
 		78D88136293CC2880046C8E1 /* Rugby_Coder_SwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88135293CC2880046C8E1 /* Rugby_Coder_SwiftUITestsLaunchTests.swift */; };
 		78D88144293CC2AB0046C8E1 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88143293CC2AB0046C8E1 /* VideoView.swift */; };
 		78D88146293CC3A30046C8E1 /* Sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78D88145293CC3A30046C8E1 /* Sample.mp4 */; };
+		78D88149293CC4990046C8E1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 78D88148293CC4990046C8E1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		78D88135293CC2880046C8E1 /* Rugby_Coder_SwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rugby_Coder_SwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		78D88143293CC2AB0046C8E1 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		78D88145293CC3A30046C8E1 /* Sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sample.mp4; path = ../../../../Downloads/Sample.mp4; sourceTree = "<group>"; };
+		78D88147293CC4100046C8E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		78D88148293CC4990046C8E1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 		78D8810B293CC2870046C8E1 = {
 			isa = PBXGroup;
 			children = (
+				78D88147293CC4100046C8E1 /* README.md */,
+				78D88148293CC4990046C8E1 /* .gitignore */,
 				78D88116293CC2870046C8E1 /* Rugby_Coder_Swift */,
 				78D88128293CC2880046C8E1 /* Rugby_Coder_SwiftTests */,
 				78D88132293CC2880046C8E1 /* Rugby_Coder_SwiftUITests */,
@@ -247,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D88149293CC4990046C8E1 /* .gitignore in Resources */,
 				78D8811F293CC2880046C8E1 /* Preview Assets.xcassets in Resources */,
 				78D8811C293CC2880046C8E1 /* Assets.xcassets in Resources */,
 				78D88146293CC3A30046C8E1 /* Sample.mp4 in Resources */,
