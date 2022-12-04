@@ -12,6 +12,7 @@ struct Rugby_Coder_SwiftApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            VideoView()
         }
     }
 }
