@@ -17,6 +17,17 @@
 		78D88144293CC2AB0046C8E1 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88143293CC2AB0046C8E1 /* VideoView.swift */; };
 		78D88146293CC3A30046C8E1 /* Sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78D88145293CC3A30046C8E1 /* Sample.mp4 */; };
 		78D88149293CC4990046C8E1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 78D88148293CC4990046C8E1 /* .gitignore */; };
+		78D8814A293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */; };
+		78D8814B293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */; };
+		78D8814D293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
+		78D8814E293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
+		78D8814F293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
+		78D88152293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
+		78D88153293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
+		78D88154293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
+		78D8815C293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
+		78D8815D293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
+		78D8815E293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +63,9 @@
 		78D88145293CC3A30046C8E1 /* Sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sample.mp4; path = ../../../../Downloads/Sample.mp4; sourceTree = "<group>"; };
 		78D88147293CC4100046C8E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		78D88148293CC4990046C8E1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		78D8814C293F7D930046C8E1 /* CodeWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowView.swift; sourceTree = "<group>"; };
+		78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowLogic.swift; sourceTree = "<group>"; };
+		78D8815B293F82370046C8E1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,8 @@
 		78D88116293CC2870046C8E1 /* Rugby_Coder_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				78D88155293F81FB0046C8E1 /* DataObject */,
+				78D88150293F80D80046C8E1 /* Logic */,
 				78D88142293CC2970046C8E1 /* View */,
 				78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */,
 				78D88119293CC2870046C8E1 /* ContentView.swift */,
@@ -144,8 +160,25 @@
 			isa = PBXGroup;
 			children = (
 				78D88143293CC2AB0046C8E1 /* VideoView.swift */,
+				78D8814C293F7D930046C8E1 /* CodeWindowView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		78D88150293F80D80046C8E1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		78D88155293F81FB0046C8E1 /* DataObject */ = {
+			isa = PBXGroup;
+			children = (
+				78D8815B293F82370046C8E1 /* TimelineData.swift */,
+			);
+			path = DataObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D8815C293F82370046C8E1 /* TimelineData.swift in Sources */,
 				78D88144293CC2AB0046C8E1 /* VideoView.swift in Sources */,
+				78D8814D293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */,
 				78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
+				78D88152293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D8815D293F82370046C8E1 /* TimelineData.swift in Sources */,
 				78D8812A293CC2880046C8E1 /* Rugby_Coder_SwiftTests.swift in Sources */,
+				78D88153293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
+				78D8814E293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
+				78D8814A293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D8815E293F82370046C8E1 /* TimelineData.swift in Sources */,
+				78D8814B293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
+				78D8814F293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				78D88136293CC2880046C8E1 /* Rugby_Coder_SwiftUITestsLaunchTests.swift in Sources */,
 				78D88134293CC2880046C8E1 /* Rugby_Coder_SwiftUITests.swift in Sources */,
+				78D88154293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

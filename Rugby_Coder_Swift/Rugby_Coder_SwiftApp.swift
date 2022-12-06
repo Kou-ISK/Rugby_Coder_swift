@@ -10,9 +10,13 @@ import SwiftUI
 @main
 struct Rugby_Coder_SwiftApp: App {
     var body: some Scene {
-        WindowGroup {
+//        TODO
+//        複数Window表示の方法を調べる
+        WindowGroup{
             ContentView()
             VideoView()
+            CodeWindowView()
         }
     }
 }
+        
