@@ -5,5 +5,6 @@
 - Import media file
 - Code window
 - Multi window
-- DataObject
+- DataObject形式を都度修正
+- getter, setterまたはそれに変わる概念の調査
 
