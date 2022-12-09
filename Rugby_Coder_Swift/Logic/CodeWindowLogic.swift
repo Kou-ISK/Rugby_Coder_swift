@@ -7,18 +7,28 @@
 
 import Foundation
 
-func setActionStartTime() -> TimelineData{
+func startAction(actionName: String) -> TimelineData{
 //TODO
 //DataObject作成後実装
     var td = TimelineData()
-    td.startTime = "Start time"
+    var time = "time"
+    td.startTime = time
+    td.actionName = actionName
     print(td.startTime!)
     return td
 }
 
-func setAction(timelineData: TimelineData) -> TimelineData{
+func endAction(timelineData: TimelineData) -> TimelineData{
     var td = timelineData
-    td.actionName = "action"
+    td.endTime = "HH:mm:ss"
     print(td.actionName!)
+    print(td.startTime!)
+    return td
+}
+
+func setQualifier(timelineData: TimelineData) -> TimelineData{
+    var td = timelineData
+    td.qualifier = "qualifier"
+    print(td.qualifier!)
     return td
 }

@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct CodeWindowView: View {
-    @State var timelineData:TimelineData?
+//    @State var timelineData:TimelineData?
+    @State var passButtonPushed:Bool = false
+    @State var passData:TimelineData?
     var body: some View {
         VStack{
-            Button("Button1"){
-                self.timelineData = setActionStartTime()
+            Button("Pass"){
+                if(passButtonPushed){
+                    endAction(timelineData: passData!)
+                }else{
+                    passData = startAction(actionName:"Pass")
+                }
+                passButtonPushed.toggle()
             }
             Button("Button2"){
-                setAction(timelineData: (timelineData)!)
             }
             Button("Button3"){
-                self.timelineData?.endTime = "end time"
             }
             Button("Button4"){
-                print(timelineData?.startTime)
             }
         }
     }

@@ -7,4 +7,5 @@
 - Multi window
 - DataObject形式を都度修正
 - getter, setterまたはそれに変わる概念の調査
+- AVKitでのmediaの再生時間を取得
 
