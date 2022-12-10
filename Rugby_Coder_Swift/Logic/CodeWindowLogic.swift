@@ -11,18 +11,16 @@ func startAction(actionName: String) -> TimelineData{
 //TODO
 //DataObject作成後実装
     var td = TimelineData()
-    var time = "time"
-    td.startTime = time
+    td.startTime = getCurrentTime()
     td.actionName = actionName
-    print(td.startTime!)
+    print(td.startTime)
     return td
 }
 
 func endAction(timelineData: TimelineData) -> TimelineData{
     var td = timelineData
-    td.endTime = "HH:mm:ss"
-    print(td.actionName!)
-    print(td.startTime!)
+    td.endTime = getCurrentTime()
+    print("Action:", td.actionName!,  ", Start Time:", td.startTime, ", End Time:",  td.endTime)
     return td
 }
 
