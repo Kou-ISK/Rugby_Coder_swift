@@ -13,14 +13,14 @@ func startAction(actionName: String) -> TimelineData{
     var td = TimelineData()
     td.startTime = getCurrentTime()
     td.actionName = actionName
-    print(td.startTime)
+    print(td.startTime!)
     return td
 }
 
 func endAction(timelineData: TimelineData) -> TimelineData{
     var td = timelineData
     td.endTime = getCurrentTime()
-    print("Action:", td.actionName!,  ", Start Time:", td.startTime, ", End Time:",  td.endTime)
+    print("Action:", td.actionName!,  ", Start Time:", td.startTime!, ", End Time:",  td.endTime!)
     return td
 }
 
