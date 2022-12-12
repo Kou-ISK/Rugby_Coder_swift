@@ -10,17 +10,20 @@ import SwiftUI
 @main
 struct Rugby_Coder_SwiftApp: App {
     var body: some Scene {
-//        TODO
-//        複数Window表示の方法を調べる
-        WindowGroup("Main"){
+        //        複数Window表示の方法を調べる ->メニューから開ける
+        Window("Main",id:"main"){
             ContentView()
-        }.defaultSize(width: 200, height: 100)
-        WindowGroup("Video"){
+            }
+        Window("Video", id:"video"){
             VideoView()
-        }.defaultSize(width: 200, height: 100)
-        WindowGroup("Code Window"){
+            }
+        Window("Code", id:"code"){
             CodeWindowView()
-        }.defaultSize(width: 200, height: 100)
+        }
+        Window("TimeLine", id:"TimeLine"){
+            TimeLine()
+        }
     }
 }
+
         

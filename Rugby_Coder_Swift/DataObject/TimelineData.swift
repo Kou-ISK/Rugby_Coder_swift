@@ -8,7 +8,7 @@
 import Foundation
 
 //形式が不明なため仮置き
-struct TimelineData{
+public struct TimelineData{
     var startTime: String?
     var endTime: String?
     var actionName: String?
