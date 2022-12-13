@@ -9,8 +9,16 @@ import SwiftUI
 // インスタンスを表示させる
 struct TimeLine: View {
     var body: some View {
-        VStack{
-           
+        HStack(alignment: .top){
+                Rectangle()
+                            .fill(Color.blue)
+                            .frame(width:200)
+                Rectangle()
+                            .fill(Color.red)
+                            .frame(width:200)
+            RoundedRectangle(cornerSize: CGSizeMake(10, 10))
+                        .fill(Color.green)
+                        .frame(width:200)
         }
         //Responsibleにする
         ForEach(videoTimelineDatas, id:\.actionName){ videoInstance in
