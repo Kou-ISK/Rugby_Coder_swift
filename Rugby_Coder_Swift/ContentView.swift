@@ -8,12 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var fileName = "Filename"
+    @State var showFileChooser = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "folder")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(fileName)
+            Button("ファイルを開く",action:{
+                // ①インスタンス生成
+                       let panel = NSOpenPanel()
+                       // ② ディレクトリの選択を許可する
+                       panel.canChooseDirectories = true
+                       // ③ ファイルの選択を不可にする
+                       panel.canChooseFiles = true
+                       // ④ NSOpenPanel の表示
+                if panel.runModal() == .OK {
+                    // ⑤ 選択されたファイル名の表示
+                    self.fileName = panel.url?.lastPathComponent ?? ""
+                }
+            })
         }
         .padding()
     }

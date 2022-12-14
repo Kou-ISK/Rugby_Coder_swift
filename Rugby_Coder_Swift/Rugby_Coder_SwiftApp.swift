@@ -11,7 +11,7 @@ import SwiftUI
 struct Rugby_Coder_SwiftApp: App {
     var body: some Scene {
         //        複数Window表示の方法を調べる ->メニューから開ける
-        Window("Main",id:"main"){
+        Window("Open",id:"open"){
             ContentView()
             }
         Window("Video", id:"video"){
