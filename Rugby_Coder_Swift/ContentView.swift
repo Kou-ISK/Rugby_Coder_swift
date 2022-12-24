@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-
+var fileName: String = "FileName"
 struct ContentView: View {
-    @State var fileName = "Filename"
+    
     @State var showFileChooser = false
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct ContentView: View {
                        // ④ NSOpenPanel の表示
                 if panel.runModal() == .OK {
                     // ⑤ 選択されたファイル名の表示
-                    self.fileName = panel.url?.lastPathComponent ?? ""
+                    fileName = panel.url?.lastPathComponent ?? ""
                 }
             })
         }
