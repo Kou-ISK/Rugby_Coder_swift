@@ -10,7 +10,7 @@ import Foundation
     func startAction(actionName: String) -> TimelineData{
         //TODO
         //DataObject作成後実装
-        var td = TimelineData()
+        var td = TimelineData(startTime: getCurrentTime(),actionName:actionName)
         td.startTime = getCurrentTime()
         td.actionName = actionName
         print(td.startTime!)

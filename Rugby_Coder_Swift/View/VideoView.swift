@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 var videoTime:String?
-var player = AVPlayer(url:URL(fileURLWithPath: fileName))
+var player = AVPlayer(url:videoFilePath!)
 //var player = AVPlayer(url: Bundle.main.url(forResource: "Sample", withExtension:"mp4")!)
 struct VideoView: View {
    

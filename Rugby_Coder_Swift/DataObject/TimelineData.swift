@@ -8,11 +8,12 @@
 import Foundation
 
 //形式が不明なため仮置き
-public struct TimelineData{
-    var startTime: String?
-    var endTime: String?
-    var actionName: String?
-    var qualifier: String?
+public struct TimelineData:Identifiable{
+    public let id = UUID()
+    public var startTime: String?
+    public var endTime: String?
+    public var actionName: String?
+    public var qualifier: String?
     
 //    init(startTime:String){
 //        self.startTime = startTime
