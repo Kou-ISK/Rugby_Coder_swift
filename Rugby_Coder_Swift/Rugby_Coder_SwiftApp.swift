@@ -14,14 +14,15 @@ struct Rugby_Coder_SwiftApp: App {
         Window("Open",id:"open"){
             ContentView()
             }
-        Window("Video", id:"video"){
-            VideoView()
-            }
         Window("Code", id:"code"){
             CodeWindowView()
         }
         Window("TimeLine", id:"TimeLine"){
             TimeLine()
+        }
+        Window("Video", id:"video"){
+            VideoView()
+            
         }
     }
 }

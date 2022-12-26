@@ -10,18 +10,16 @@ import SwiftUI
 struct TimeLine: View {
     @State private var timelineDataList = videoTimelineDatas
     var body: some View {
-        HStack(alignment: .top){
-            Table(timelineDataList){
-                TableColumn("Start Time") { timelineDataList in
-                    Text(timelineDataList.startTime ?? "")
+            Table(videoTimelineDatas){
+                TableColumn("Start Time") { timelineData in
+                    Text(timelineData.startTime!)
                                 }
-                TableColumn("End Time") { timelineDataList in
-                    Text(timelineDataList.endTime ?? "")
+                TableColumn("End Time") { timelineData in
+                    Text(timelineData.endTime!)
                                 }
-                TableColumn("Action Name") { timelineDataList in
-                                    Text(timelineDataList.actionName ?? "")
+                TableColumn("Action Name") { timelineData in
+                    Text(timelineData.actionName!)
                                 }
-            }
         }
         //Responsibleにする
         ForEach(videoTimelineDatas, id:\.actionName){ videoInstance in
