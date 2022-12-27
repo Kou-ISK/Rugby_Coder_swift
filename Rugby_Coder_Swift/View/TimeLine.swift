@@ -8,20 +8,20 @@
 import SwiftUI
 // インスタンスを表示させる
 struct TimeLine: View {
-    @State private var timelineDataList = videoTimelineDatas
+    @State private var TimelineDataId = Set<TimelineData.ID>()
     var body: some View {
-            Table(videoTimelineDatas){
-                TableColumn("Start Time") { timelineData in
-                    Text(timelineData.startTime!)
-                                }
-                TableColumn("End Time") { timelineData in
-                    Text(timelineData.endTime!)
-                                }
-                TableColumn("Action Name") { timelineData in
-                    Text(timelineData.actionName!)
-                                }
+        Table(videoTimelineDatas){
+            TableColumn("Start Time"){ TimelineData in
+                Text(String(TimelineData.startTime))
+            }
+            TableColumn("End Time"){ TimelineData in
+                Text(String(TimelineData.endTime!))
+            }
+            TableColumn("Action Name"){ TimelineData in
+                Text(String(TimelineData.actionName))
+            }
         }
-        //Responsibleにする
+        //Responsiveにする
         ForEach(videoTimelineDatas, id:\.actionName){ videoInstance in
             Button("Button",action: {print(videoInstance)})
         }

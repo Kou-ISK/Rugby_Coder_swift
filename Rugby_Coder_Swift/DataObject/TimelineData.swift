@@ -10,9 +10,9 @@ import Foundation
 //形式が不明なため仮置き
 public struct TimelineData:Identifiable{
     public let id = UUID()
-    public var startTime: String?
+    public var startTime: String
     public var endTime: String?
-    public var actionName: String?
+    public var actionName: String
     public var qualifier: String?
     
 //    init(startTime:String){

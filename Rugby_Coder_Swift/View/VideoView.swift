@@ -18,7 +18,7 @@ struct VideoView: View {
 }
 
 func getCurrentTime() -> String? {
-    var currentTime = player.currentTime()
+    let currentTime = player.currentTime()
     videoTime = String(CMTimeGetSeconds(currentTime))
     return videoTime
 }

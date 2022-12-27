@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
-
+var videoTimelineDatas: [TimelineData] = [TimelineData(startTime: "", endTime:"", actionName: "",qualifier:"")]
 struct CodeWindowView: View {
 //    @State var timelineData:TimelineData?
+  
     @State var passButtonPushed:Bool = false
     @State var tackleButtonPushed:Bool = false
     @State var tackleData:TimelineData?
     @State var passData:TimelineData?
+    
     var body: some View {
         VStack{
             Button("Pass"){
                 if(passButtonPushed){
-                    endAction(timelineData: passData!)
+                    videoTimelineDatas.append(endAction(timelineData: passData!))
                 }else{
                     passData = startAction(actionName:"Pass")
                 }
@@ -25,7 +27,7 @@ struct CodeWindowView: View {
             }
             Button("Tackle"){
                 if(tackleButtonPushed){
-                    endAction(timelineData: tackleData!)
+                    videoTimelineDatas.append(endAction(timelineData: tackleData!))
                 }else{
                     tackleData = startAction(actionName:"Tackle")
                 }

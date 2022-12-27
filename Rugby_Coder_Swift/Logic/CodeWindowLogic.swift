@@ -6,22 +6,19 @@
 //
 
 import Foundation
-    public var videoTimelineDatas = [TimelineData]()
+
     func startAction(actionName: String) -> TimelineData{
         //TODO
         //DataObject作成後実装
-        var td = TimelineData(startTime: getCurrentTime(),actionName:actionName)
-        td.startTime = getCurrentTime()
-        td.actionName = actionName
-        print(td.startTime!)
+        var td = TimelineData(startTime: getCurrentTime() ?? "",actionName:actionName)
+        print(td.startTime)
         return td
     }
     
     func endAction(timelineData: TimelineData) -> TimelineData{
         var td = timelineData
         td.endTime = getCurrentTime()
-        print("Action:", td.actionName!,  ", Start Time:", td.startTime!, ", End Time:",  td.endTime!)
-        videoTimelineDatas.append(td)
+        print("Action:", td.actionName,  ", Start Time:", td.startTime, ", End Time:",  td.endTime!)
         return td
     }
     
