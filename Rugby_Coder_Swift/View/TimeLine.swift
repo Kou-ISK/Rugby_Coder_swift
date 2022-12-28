@@ -10,7 +10,7 @@ import SwiftUI
 struct TimeLine: View {
     @State private var TimelineDataId = Set<TimelineData.ID>()
     var body: some View {
-        Table(videoTimelineDatas){
+        Table(CodeWindowView().videoTimelineDatas){
             TableColumn("Start Time"){ TimelineData in
                 Text(String(TimelineData.startTime))
             }
@@ -22,7 +22,7 @@ struct TimeLine: View {
             }
         }
         //Responsiveにする
-        ForEach(videoTimelineDatas, id:\.actionName){ videoInstance in
+        ForEach(CodeWindowView().videoTimelineDatas, id:\.actionName){ videoInstance in
             Button("Button",action: {print(videoInstance)})
         }
     }

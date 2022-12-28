@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-var videoTimelineDatas: [TimelineData] = [TimelineData(startTime: "", endTime:"", actionName: "",qualifier:"")]
+
 struct CodeWindowView: View {
 //    @State var timelineData:TimelineData?
-  
+    @State public var videoTimelineDatas: [TimelineData] = [TimelineData(startTime: "", endTime:"", actionName: "",qualifier:"")]
     @State var passButtonPushed:Bool = false
     @State var tackleButtonPushed:Bool = false
     @State var tackleData:TimelineData?
     @State var passData:TimelineData?
-    
+    public func getTimelineDatas() -> [TimelineData]{
+        return videoTimelineDatas
+    }
     var body: some View {
         VStack{
             Button("Pass"){
@@ -34,12 +36,26 @@ struct CodeWindowView: View {
                 tackleButtonPushed.toggle()
             }
             Button("Button3"){
+                print("出力します")
+                print(videoTimelineDatas)
             }
             Button("Button4"){
+            }
+            Table(videoTimelineDatas){
+                TableColumn("Start Time"){ TimelineData in
+                    Text(String(TimelineData.startTime))
+                }
+                TableColumn("End Time"){ TimelineData in
+                    Text(String(TimelineData.endTime!))
+                }
+                TableColumn("Action Name"){ TimelineData in
+                    Text(String(TimelineData.actionName))
+                }
             }
         }
     }
 }
+
 
 struct CodeWindowView_Previews: PreviewProvider {
     static var previews: some View {
