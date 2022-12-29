@@ -19,27 +19,30 @@ struct CodeWindowView: View {
     }
     var body: some View {
         VStack{
-            Button("Pass"){
-                if(passButtonPushed){
-                    videoTimelineDatas.append(endAction(timelineData: passData!))
-                }else{
-                    passData = startAction(actionName:"Pass")
+            HStack{
+                Button("Pass"){
+                    if(passButtonPushed){
+                        videoTimelineDatas.append(endAction(timelineData: passData!))
+                    }else{
+                        passData = startAction(actionName:"Pass")
+                    }
+                    passButtonPushed.toggle()
+                }.background(self.passButtonPushed ? Color.secondary:Color.accentColor)
+                Button("Tackle"){
+                    if(tackleButtonPushed){
+                        videoTimelineDatas.append(endAction(timelineData: tackleData!))
+//                        TODO ラベルを指定するウィンドウ,ボタンを表示する
+                        }
+                    }else{
+                        tackleData = startAction(actionName:"Tackle")
+                    }
+                    tackleButtonPushed.toggle()
+                }.background(self.tackleButtonPushed ? Color.secondary:Color.accentColor)
+                Button("Button3"){
+                    print("出力します")
                 }
-                passButtonPushed.toggle()
-            }
-            Button("Tackle"){
-                if(tackleButtonPushed){
-                    videoTimelineDatas.append(endAction(timelineData: tackleData!))
-                }else{
-                    tackleData = startAction(actionName:"Tackle")
+                Button("Button4"){
                 }
-                tackleButtonPushed.toggle()
-            }
-            Button("Button3"){
-                print("出力します")
-                print(videoTimelineDatas)
-            }
-            Button("Button4"){
             }
             Table(videoTimelineDatas){
                 TableColumn("Start Time"){ TimelineData in

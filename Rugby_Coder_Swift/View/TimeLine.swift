@@ -8,7 +8,6 @@
 import SwiftUI
 // インスタンスを表示させる
 struct TimeLine: View {
-    @State private var TimelineDataId = Set<TimelineData.ID>()
     var body: some View {
         Table(CodeWindowView().videoTimelineDatas){
             TableColumn("Start Time"){ TimelineData in
