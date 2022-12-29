@@ -32,7 +32,6 @@ struct CodeWindowView: View {
                     if(tackleButtonPushed){
                         videoTimelineDatas.append(endAction(timelineData: tackleData!))
 //                        TODO ラベルを指定するウィンドウ,ボタンを表示する
-                        }
                     }else{
                         tackleData = startAction(actionName:"Tackle")
                     }
