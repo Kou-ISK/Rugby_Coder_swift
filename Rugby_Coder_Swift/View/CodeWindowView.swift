@@ -14,6 +14,7 @@ struct CodeWindowView: View {
     @State var tackleButtonPushed:Bool = false
     @State var tackleData:TimelineData?
     @State var passData:TimelineData?
+    @State private var selection: TimelineData.ID?=nil
     public func getTimelineDatas() -> [TimelineData]{
         return videoTimelineDatas
     }
@@ -37,13 +38,20 @@ struct CodeWindowView: View {
                     }
                     tackleButtonPushed.toggle()
                 }.background(self.tackleButtonPushed ? Color.secondary:Color.accentColor)
-                Button("Button3"){
-                    print("出力します")
+                Button("Jump to..."){
+                    if(selection != nil){
+                        print(videoTimelineDatas.first(where: { data in
+                            data.id == selection!
+                        })?.startTime)
+                        seek(jumpTime: videoTimelineDatas.first(where: { data in
+                            data.id == selection!
+                        })!.startTime)
+                    }
                 }
                 Button("Button4"){
                 }
             }
-            Table(videoTimelineDatas){
+            Table(videoTimelineDatas,selection: $selection){
                 TableColumn("Start Time"){ TimelineData in
                     Text(String(TimelineData.startTime))
                 }

@@ -23,6 +23,11 @@ func getCurrentTime() -> String? {
     return videoTime
 }
 
+// TODO seekできるようにする
+func seek(jumpTime:String){
+    player.seek(to: CMTimeMakeWithSeconds(Float64(jumpTime) ?? 0.0, preferredTimescale: 0))
+}
+
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
         VideoView()
