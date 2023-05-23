@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CodeWindowView: View {
 //    @State var timelineData:TimelineData?
+    @ObservedObject var logic = CodeWindowLogic()
+    @ObservedObject var videoViewModel = VideoViewModel()
     @State public var videoTimelineDatas: [TimelineData] = [TimelineData(startTime: "", endTime:"", actionName: "",qualifier:"")]
     @State var passButtonPushed:Bool = false
     @State var tackleButtonPushed:Bool = false
@@ -23,18 +25,18 @@ struct CodeWindowView: View {
             HStack{
                 Button("Pass"){
                     if(passButtonPushed){
-                        videoTimelineDatas.append(endAction(timelineData: passData!))
+                        videoTimelineDatas.append(logic.endAction(timelineData: passData!))
                     }else{
-                        passData = startAction(actionName:"Pass")
+                        passData = logic.startAction(actionName:"Pass")
                     }
                     passButtonPushed.toggle()
                 }.background(self.passButtonPushed ? Color.secondary:Color.accentColor)
                 Button("Tackle"){
                     if(tackleButtonPushed){
-                        videoTimelineDatas.append(endAction(timelineData: tackleData!))
+                        videoTimelineDatas.append(logic.endAction(timelineData: tackleData!))
 //                        TODO ラベルを指定するウィンドウ,ボタンを表示する
                     }else{
-                        tackleData = startAction(actionName:"Tackle")
+                        tackleData = logic.startAction(actionName:"Tackle")
                     }
                     tackleButtonPushed.toggle()
                 }.background(self.tackleButtonPushed ? Color.secondary:Color.accentColor)
@@ -43,12 +45,13 @@ struct CodeWindowView: View {
                         print(videoTimelineDatas.first(where: { data in
                             data.id == selection!
                         })?.startTime)
-                        seek(jumpTime: videoTimelineDatas.first(where: { data in
+                        videoViewModel.seek(jumpTime: videoTimelineDatas.first(where: { data in
                             data.id == selection!
                         })!.startTime)
                     }
                 }
                 Button("Button4"){
+                    print(videoViewModel.$videoFilePath)
                 }
             }
             Table(videoTimelineDatas,selection: $selection){

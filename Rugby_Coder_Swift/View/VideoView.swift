@@ -6,27 +6,19 @@
 //
 
 import SwiftUI
-import AVKit
+import _AVKit_SwiftUI
 
-var videoTime:String?
-var player = AVPlayer(url: videoFilePath!)
+
 //var player = AVPlayer(url: Bundle.main.url(forResource: "Sample", withExtension:"mp4")!)
 struct VideoView: View {
+    @ObservedObject var viewModel =  VideoViewModel()
     var body: some View {
-        VideoPlayer(player:player)
+        // TODO　VideoPlayerが表示されるようにする
+        VideoPlayer(player: viewModel.player)
     }
 }
 
-func getCurrentTime() -> String? {
-    let currentTime = player.currentTime()
-    videoTime = String(CMTimeGetSeconds(currentTime))
-    return videoTime
-}
 
-// TODO seekできるようにする
-func seek(jumpTime:String){
-    player.seek(to: CMTimeMakeWithSeconds(Float64(jumpTime) ?? 0.0, preferredTimescale: 0))
-}
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {

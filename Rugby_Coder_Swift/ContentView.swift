@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-var videoFilePath =  URL(string:"/Users/isakakou/Downloads/Sample.mp4")
+
 struct ContentView: View {
     @State var fileName = "FileName"
     @State var showFileChooser = false
+    @ObservedObject var videoViewModel = VideoViewModel()
     var body: some View {
         VStack {
             Image(systemName: "folder")
@@ -27,7 +28,10 @@ struct ContentView: View {
                 if panel.runModal() == .OK {
                     // ⑤ 選択されたファイル名の表示
                     fileName = panel.url?.lastPathComponent ?? ""
-                    videoFilePath = panel.url
+                    videoViewModel.videoFilePath = panel.url
+                    print(fileName)
+                    print(videoViewModel.videoFilePath)
+                    videoViewModel.createPlayer()
                 }
             })
         }
