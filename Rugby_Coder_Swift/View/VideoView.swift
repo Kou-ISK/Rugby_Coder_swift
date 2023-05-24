@@ -11,13 +11,13 @@ import _AVKit_SwiftUI
 
 //var player = AVPlayer(url: Bundle.main.url(forResource: "Sample", withExtension:"mp4")!)
 struct VideoView: View {
-    @ObservedObject var viewModel =  VideoViewModel()
+    @ObservedObject var viewModel = VideoViewModel()
+    
     var body: some View {
         // TODO　VideoPlayerが表示されるようにする
         VideoPlayer(player: viewModel.player)
+                    }
     }
-}
-
 
 
 struct VideoView_Previews: PreviewProvider {

@@ -30,8 +30,9 @@ struct ContentView: View {
                     fileName = panel.url?.lastPathComponent ?? ""
                     videoViewModel.videoFilePath = panel.url
                     print(fileName)
-                    print(videoViewModel.videoFilePath)
-                    videoViewModel.createPlayer()
+                    videoViewModel.urlString = panel.url?.absoluteString
+                    print("==========================")
+                    print(panel.url?.absoluteString)
                 }
             })
         }

@@ -12,22 +12,26 @@ import _AVKit_SwiftUI
 class VideoViewModel:ObservableObject{
     @Published var videoFilePath:URL?
     @Published var videoTime:String?
-    @Published var player: AVPlayer?
-    
-    
-    func createPlayer(){
-        player = AVPlayer(url: videoFilePath!)
+    @Published var urlString : String? {
+        didSet {
+            guard let urlString = urlString, let url = URL(string: urlString) else {
+                return
+            }
+            player = AVPlayer(url: url)
+            player.seek(to: .zero)
+            player.play()
+        }
     }
-    
+        var player = AVPlayer()
     
     func getCurrentTime() -> String? {
-        let currentTime = player?.currentTime()
-        videoTime = String(CMTimeGetSeconds(currentTime!))
+        let currentTime = player.currentTime()
+        videoTime = String(CMTimeGetSeconds(currentTime))
         return videoTime
     }
 
     // TODO seekできるようにする
     func seek(jumpTime:String){
-        player?.seek(to: CMTimeMakeWithSeconds(Float64(jumpTime) ?? 0.0, preferredTimescale: 0))
+        player.seek(to: CMTimeMakeWithSeconds(Float64(jumpTime) ?? 0.0, preferredTimescale: 0))
     }
 }

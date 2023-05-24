@@ -22,7 +22,6 @@ struct Rugby_Coder_SwiftApp: App {
         }
         Window("Video", id:"video"){
             VideoView()
-            
         }
     }
 }
