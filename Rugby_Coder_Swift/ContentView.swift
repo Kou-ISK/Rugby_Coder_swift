@@ -33,6 +33,7 @@ struct ContentView: View {
                     videoViewModel.urlString = panel.url?.absoluteString
                     print("==========================")
                     print(videoViewModel.urlString)
+                    videoViewModel.createPlayer(urlString: panel.url!.absoluteString)
                 }
             })
         }

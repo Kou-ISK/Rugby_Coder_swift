@@ -11,6 +11,7 @@ struct MenuBar: View {
     var body: some View {
         Menu("Menu"){
             Text("menu")
+            Text("aaaaa")
         }
     }
 }

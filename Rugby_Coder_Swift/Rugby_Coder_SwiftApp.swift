@@ -13,7 +13,7 @@ struct Rugby_Coder_SwiftApp: App {
         //        複数Window表示の方法を調べる ->メニューから開ける
         Window("Open",id:"open"){
             ContentView()
-            }
+        }.defaultSize(width: 6,height:6)
         Window("Code", id:"code"){
             CodeWindowView()
         }
