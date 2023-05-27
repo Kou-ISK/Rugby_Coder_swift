@@ -29,7 +29,6 @@
 		78D8815C293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
 		78D8815D293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
 		78D8815E293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
-		78D8816029474EA70046C8E1 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815F29474EA70046C8E1 /* MenuBar.swift */; };
 		78D8816229474F220046C8E1 /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8816129474F220046C8E1 /* TimeLine.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 		78D8814C293F7D930046C8E1 /* CodeWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowView.swift; sourceTree = "<group>"; };
 		78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowLogic.swift; sourceTree = "<group>"; };
 		78D8815B293F82370046C8E1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
-		78D8815F29474EA70046C8E1 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		78D8816129474F220046C8E1 /* TimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +182,6 @@
 			children = (
 				78D88143293CC2AB0046C8E1 /* VideoView.swift */,
 				78D8814C293F7D930046C8E1 /* CodeWindowView.swift */,
-				78D8815F29474EA70046C8E1 /* MenuBar.swift */,
 				78D8816129474F220046C8E1 /* TimeLine.swift */,
 			);
 			path = View;
@@ -345,7 +342,6 @@
 				7829ECFD2A1CD97E00222E11 /* VideoViewModel.swift in Sources */,
 				78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */,
 				78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
-				78D8816029474EA70046C8E1 /* MenuBar.swift in Sources */,
 				78D88152293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
