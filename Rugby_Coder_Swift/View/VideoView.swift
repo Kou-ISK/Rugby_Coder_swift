@@ -12,9 +12,15 @@ import _AVKit_SwiftUI
 //var player = AVPlayer(url: Bundle.main.url(forResource: "Sample", withExtension:"mp4")!)
 struct VideoView: View {
     @ObservedObject var viewModel = VideoViewModel()
+    @State var player = AVPlayer()
+    @State var vp = VideoPlayer(player: AVPlayer(url:URL(string:"file://")!))
+    public func setPlayer(){
+        self.player = viewModel.player
+        self.vp = VideoPlayer(player:self.player)
+    }
     var body: some View {
         // TODO　VideoPlayerが表示されるようにする
-        VideoPlayer(player: viewModel.player)
+        vp.onAppear(perform: {self.setPlayer()})
     }
 }
 
