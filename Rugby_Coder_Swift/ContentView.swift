@@ -32,7 +32,7 @@ struct ContentView: View {
                     print(fileName)
                     videoViewModel.urlString = panel.url?.absoluteString
                     print("==========================")
-                    print(videoViewModel.urlString)
+                    videoViewModel.setPlayer(urlString: panel.url?.absoluteString ?? "")
                 }
             })
         }

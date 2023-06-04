@@ -15,8 +15,8 @@ class VideoViewModel:ObservableObject{
     @Published var urlString : String?
     @Published var player = AVPlayer()
     
-    func getPlayer() -> AVPlayer{
-        return AVPlayer(url: URL(string:urlString!)!)
+    func setPlayer(urlString:String){
+        self.player = AVPlayer(url: URL(string:urlString)!)
     }
     
     func getCurrentTime() -> String? {
