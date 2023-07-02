@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781377F32A51A3FD00F3C851 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781377F22A51A3FD00F3C851 /* StartView.swift */; };
+		781377F52A51AA8600F3C851 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781377F42A51AA8600F3C851 /* ModelData.swift */; };
 		7829ECFD2A1CD97E00222E11 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ECFC2A1CD97E00222E11 /* VideoViewModel.swift */; };
 		78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */; };
 		78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88119293CC2870046C8E1 /* ContentView.swift */; };
@@ -23,13 +25,10 @@
 		78D8814D293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
 		78D8814E293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
 		78D8814F293F7D930046C8E1 /* CodeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8814C293F7D930046C8E1 /* CodeWindowView.swift */; };
-		78D88152293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
-		78D88153293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
-		78D88154293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */; };
-		78D8815C293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
-		78D8815D293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
-		78D8815E293F82370046C8E1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* TimelineData.swift */; };
-		78D8816229474F220046C8E1 /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8816129474F220046C8E1 /* TimeLine.swift */; };
+		78D8815C293F82370046C8E1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* Timeline.swift */; };
+		78D8815D293F82370046C8E1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* Timeline.swift */; };
+		78D8815E293F82370046C8E1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8815B293F82370046C8E1 /* Timeline.swift */; };
+		78D8816229474F220046C8E1 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8816129474F220046C8E1 /* TimeLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		781377F22A51A3FD00F3C851 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		781377F42A51AA8600F3C851 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		7829ECFC2A1CD97E00222E11 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		78D88114293CC2870046C8E1 /* Rugby_Coder_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rugby_Coder_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rugby_Coder_SwiftApp.swift; sourceTree = "<group>"; };
@@ -67,9 +68,8 @@
 		78D88147293CC4100046C8E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		78D88148293CC4990046C8E1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		78D8814C293F7D930046C8E1 /* CodeWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowView.swift; sourceTree = "<group>"; };
-		78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWindowLogic.swift; sourceTree = "<group>"; };
-		78D8815B293F82370046C8E1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
-		78D8816129474F220046C8E1 /* TimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
+		78D8815B293F82370046C8E1 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		78D8816129474F220046C8E1 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,8 @@
 		7829ECFA2A1CD95700222E11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				78D8815B293F82370046C8E1 /* Timeline.swift */,
+				781377F42A51AA8600F3C851 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,8 +141,6 @@
 			children = (
 				7829ECFB2A1CD95E00222E11 /* ViewModel */,
 				7829ECFA2A1CD95700222E11 /* Model */,
-				78D88155293F81FB0046C8E1 /* DataObject */,
-				78D88150293F80D80046C8E1 /* Logic */,
 				78D88142293CC2970046C8E1 /* View */,
 				78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */,
 				78D88119293CC2870046C8E1 /* ContentView.swift */,
@@ -182,25 +182,10 @@
 			children = (
 				78D88143293CC2AB0046C8E1 /* VideoView.swift */,
 				78D8814C293F7D930046C8E1 /* CodeWindowView.swift */,
-				78D8816129474F220046C8E1 /* TimeLine.swift */,
+				78D8816129474F220046C8E1 /* TimeLineView.swift */,
+				781377F22A51A3FD00F3C851 /* StartView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		78D88150293F80D80046C8E1 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				78D88151293F80ED0046C8E1 /* CodeWindowLogic.swift */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		78D88155293F81FB0046C8E1 /* DataObject */ = {
-			isa = PBXGroup;
-			children = (
-				78D8815B293F82370046C8E1 /* TimelineData.swift */,
-			);
-			path = DataObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +252,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					78D88113293CC2870046C8E1 = {
 						CreatedOnToolsVersion = 14.1;
@@ -335,14 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D8816229474F220046C8E1 /* TimeLine.swift in Sources */,
-				78D8815C293F82370046C8E1 /* TimelineData.swift in Sources */,
+				78D8816229474F220046C8E1 /* TimeLineView.swift in Sources */,
+				78D8815C293F82370046C8E1 /* Timeline.swift in Sources */,
+				781377F52A51AA8600F3C851 /* ModelData.swift in Sources */,
 				78D88144293CC2AB0046C8E1 /* VideoView.swift in Sources */,
+				781377F32A51A3FD00F3C851 /* StartView.swift in Sources */,
 				78D8814D293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				7829ECFD2A1CD97E00222E11 /* VideoViewModel.swift in Sources */,
 				78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */,
 				78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
-				78D88152293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D8815D293F82370046C8E1 /* TimelineData.swift in Sources */,
+				78D8815D293F82370046C8E1 /* Timeline.swift in Sources */,
 				78D8812A293CC2880046C8E1 /* Rugby_Coder_SwiftTests.swift in Sources */,
-				78D88153293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 				78D8814E293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				78D8814A293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
 			);
@@ -362,12 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D8815E293F82370046C8E1 /* TimelineData.swift in Sources */,
+				78D8815E293F82370046C8E1 /* Timeline.swift in Sources */,
 				78D8814B293F77060046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
 				78D8814F293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				78D88136293CC2880046C8E1 /* Rugby_Coder_SwiftUITestsLaunchTests.swift in Sources */,
 				78D88134293CC2880046C8E1 /* Rugby_Coder_SwiftUITests.swift in Sources */,
-				78D88154293F80ED0046C8E1 /* CodeWindowLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +404,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -480,6 +465,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -509,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Rugby_Coder_Swift/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -534,6 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Rugby_Coder_Swift/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -557,6 +545,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -575,6 +564,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -592,6 +582,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kou-Isaka.Rugby-Coder-SwiftUITests";
@@ -608,6 +599,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kou-Isaka.Rugby-Coder-SwiftUITests";

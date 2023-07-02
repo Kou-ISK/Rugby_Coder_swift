@@ -7,7 +7,7 @@
 
 import SwiftUI
 // インスタンスを表示させる
-struct TimeLine: View {
+struct TimeLineView: View {
     var body: some View {
         Table(CodeWindowView().videoTimelineDatas){
             TableColumn("Start Time"){ TimelineData in
@@ -27,7 +27,7 @@ struct TimeLine: View {
     }
 }
 
-struct TimeLine_Previews: PreviewProvider {
+struct TimeLineView_Previews: PreviewProvider {
     static var previews: some View {
         TimeLine()
     }

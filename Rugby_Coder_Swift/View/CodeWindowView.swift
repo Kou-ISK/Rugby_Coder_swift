@@ -9,15 +9,14 @@ import SwiftUI
 
 struct CodeWindowView: View {
 //    @State var timelineData:TimelineData?
-    @ObservedObject var logic = CodeWindowLogic()
     @ObservedObject var videoViewModel = VideoViewModel()
-    @State public var videoTimelineDatas: [TimelineData] = [TimelineData(startTime: "", endTime:"", actionName: "",qualifier:"")]
+    @State public var videoTimelineDatas: [Timeline] = [Timeline(startTime: "", endTime:"", actionName: "",qualifier:"")]
     @State var passButtonPushed:Bool = false
     @State var tackleButtonPushed:Bool = false
-    @State var tackleData:TimelineData?
-    @State var passData:TimelineData?
-    @State private var selection: TimelineData.ID?=nil
-    public func getTimelineDatas() -> [TimelineData]{
+    @State var tackleData:Timeline
+    @State var passData:Timeline
+    @State private var selection: Timeline.ID?=nil
+    public func getTimelineDatas() -> [Timeline]{
         return videoTimelineDatas
     }
     var body: some View {
