@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var modelData: ModelData
     @State var fileName = "FileName"
     @State var showFileChooser = false
-    @ObservedObject var videoViewModel = VideoViewModel()
     var body: some View {
-        NavigationView{
+        HStack{
             VStack {
                 Image(systemName: "folder")
                     .imageScale(.large)
@@ -29,14 +29,14 @@ struct StartView: View {
                     if panel.runModal() == .OK {
                         // ⑤ 選択されたファイル名の表示
                         fileName = panel.url?.lastPathComponent ?? ""
-                        videoViewModel.videoFilePath = panel.url
+                        var videoFilePath = panel.url
                         print(fileName)
-                        videoViewModel.urlString = panel.url?.absoluteString
-                        videoViewModel.setPlayer(urlString: panel.url?.absoluteString ?? "")
+                        var urlString = panel.url?.absoluteString
                     }
                 })
             }
-        }.navigationTitle("Navi")
+            TimeLineView()
+        }
     }
 }
 

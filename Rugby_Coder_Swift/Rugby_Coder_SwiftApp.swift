@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Rugby_Coder_SwiftApp: App {
+    @StateObject var modelData = ModelData()
     var body: some Scene {
         WindowGroup{
-            ContentView()
+            ContentView().environmentObject(modelData)
         }
     }
 }

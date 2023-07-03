@@ -8,27 +8,24 @@
 import SwiftUI
 // インスタンスを表示させる
 struct TimeLineView: View {
+    @EnvironmentObject var modelData:ModelData
     var body: some View {
-        Table(CodeWindowView().videoTimelineDatas){
-            TableColumn("Start Time"){ TimelineData in
-                Text(String(TimelineData.startTime))
+        Table(modelData.timeline){
+            TableColumn("Start Time"){ timelineData in
+                Text(String(timelineData.startTime))
             }
-            TableColumn("End Time"){ TimelineData in
-                Text(String(TimelineData.endTime!))
+            TableColumn("End Time"){ timelineData in
+                Text(String(timelineData.endTime))
             }
-            TableColumn("Action Name"){ TimelineData in
-                Text(String(TimelineData.actionName))
+            TableColumn("Action Name"){ timelineData in
+                Text(String(timelineData.actionName))
             }
-        }
-        //Responsiveにする
-        ForEach(CodeWindowView().videoTimelineDatas, id:\.actionName){ videoInstance in
-            Button("Button",action: {print(videoInstance)})
         }
     }
 }
 
 struct TimeLineView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeLine()
+        TimeLineView().environmentObject(ModelData())
     }
 }

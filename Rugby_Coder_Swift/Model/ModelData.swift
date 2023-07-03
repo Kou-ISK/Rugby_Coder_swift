@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ModelData:ObservableObject{
+final class ModelData: ObservableObject{
     @Published var timeline: [Timeline] = load("timeline.json")
 }
 
