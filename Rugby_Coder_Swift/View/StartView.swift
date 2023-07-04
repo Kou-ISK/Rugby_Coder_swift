@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import _AVKit_SwiftUI
 
 struct StartView: View {
     @EnvironmentObject var modelData: ModelData
     @State var fileName = "FileName"
     @State var showFileChooser = false
+    @State var urlString: String?
+    @State var urlString2: String?
     var body: some View {
         HStack{
             VStack {
@@ -21,7 +24,7 @@ struct StartView: View {
                 Button("ファイルを開く",action:{
                     // ①インスタンス生成
                     let panel = NSOpenPanel()
-                    // ② ディレクトリの選択を許可するf
+                    // ② ディレクトリの選択を許可する
                     panel.canChooseDirectories = true
                     // ③ ファイルの選択を不可にする
                     panel.canChooseFiles = true
@@ -31,11 +34,32 @@ struct StartView: View {
                         fileName = panel.url?.lastPathComponent ?? ""
                         var videoFilePath = panel.url
                         print(fileName)
-                        var urlString = panel.url?.absoluteString
+                        urlString = panel.url?.absoluteString
                     }
                 })
+                Button("ファイル2を開く",action:{
+                    // ①インスタンス生成
+                    let panel2 = NSOpenPanel()
+                    // ② ディレクトリの選択を許可する
+                    panel2.canChooseDirectories = true
+                    // ③ ファイルの選択を不可にする
+                    panel2.canChooseFiles = true
+                    // ④ NSOpenPanel の表示
+                    if panel2.runModal() == .OK {
+                        urlString2 = panel2.url?.absoluteString
+                    }
+                }
+                )
             }
-            TimeLineView()
+            VStack{
+                if(urlString != nil){
+                    VideoPlayer(player: AVPlayer(url:URL(string:urlString!)!))
+                }
+                if(urlString2 != nil){
+                    VideoPlayer(player: AVPlayer(url:URL(string:urlString2!)!))
+                }
+                TimeLineView()
+            }
         }
     }
 }
