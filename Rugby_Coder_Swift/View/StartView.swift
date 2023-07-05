@@ -14,8 +14,9 @@ struct StartView: View {
     @State var showFileChooser = false
     @State var urlString: String?
     @State var urlString2: String?
+    @State var startCoding: Bool = false
     var body: some View {
-        HStack{
+        if(!startCoding){
             VStack {
                 Image(systemName: "folder")
                     .imageScale(.large)
@@ -50,15 +51,24 @@ struct StartView: View {
                     }
                 }
                 )
+                Button("コーディングを開始する"){
+                    startCoding.toggle()
+                }
             }
-            VStack{
-                if(urlString != nil){
-                    VideoPlayer(player: AVPlayer(url:URL(string:urlString!)!))
+        }else{
+            HStack{
+                VStack{
+                    HStack{
+                        if(urlString != nil){
+                            VideoPlayer(player: AVPlayer(url:URL(string:urlString!)!))
+                        }
+                        if(urlString2 != nil){
+                            VideoPlayer(player: AVPlayer(url:URL(string:urlString2!)!))
+                        }
+                    }
+                    TimeLineView()
                 }
-                if(urlString2 != nil){
-                    VideoPlayer(player: AVPlayer(url:URL(string:urlString2!)!))
-                }
-                TimeLineView()
+                CodeWindowView().padding(30)
             }
         }
     }

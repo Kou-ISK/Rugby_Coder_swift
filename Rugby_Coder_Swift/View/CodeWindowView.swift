@@ -10,7 +10,9 @@ import SwiftUI
 struct CodeWindowView: View {
     @EnvironmentObject var modelData: ModelData
     var body: some View {
-        Text("Hello World")
+        Button("Tackle"){
+            Text("aaaa")
+        }
     }
 }
 
