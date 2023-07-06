@@ -56,19 +56,24 @@ struct StartView: View {
                 }
             }
         }else{
+            // TODO フレームのサイズを変更できるように修正
             HStack{
                 VStack{
                     HStack{
                         if(urlString != nil){
                             VideoPlayer(player: AVPlayer(url:URL(string:urlString!)!))
+                                .frame(minWidth:200,minHeight:200)
                         }
                         if(urlString2 != nil){
                             VideoPlayer(player: AVPlayer(url:URL(string:urlString2!)!))
+                                .frame(minWidth:200,minHeight:200)
                         }
                     }
                     TimeLineView()
+                        .frame(minWidth:200,minHeight:200)
                 }
-                CodeWindowView().padding(30)
+                CodeWindowView()
+                    .frame(width:200,height:300)
             }
         }
     }
