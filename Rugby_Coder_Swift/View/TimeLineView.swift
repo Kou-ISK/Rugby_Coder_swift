@@ -18,9 +18,10 @@ struct TimeLineView: View {
                 Text(String(timelineData.endTime))
             }
             TableColumn("Action Name"){ timelineData in
-                Button(label:String(timelineData.actionName), action:{
+                Button(action:{
+                    print("====Button Pushed====")
                     print(timelineData.actionName)
-                })
+                }){Text(String(timelineData.actionName))}
             }
         }
     }
