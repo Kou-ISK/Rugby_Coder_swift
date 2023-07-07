@@ -18,7 +18,9 @@ struct TimeLineView: View {
                 Text(String(timelineData.endTime))
             }
             TableColumn("Action Name"){ timelineData in
-                Text(String(timelineData.actionName))
+                Button(label:String(timelineData.actionName), action:{
+                    print(timelineData.actionName)
+                })
             }
         }
     }
