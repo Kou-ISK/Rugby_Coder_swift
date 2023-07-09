@@ -11,7 +11,7 @@ struct CodeWindowView: View {
     @EnvironmentObject var modelData: ModelData
     var body: some View {
         Button("Tackle"){
-            Text("aaaa")
+            print("aaaa")
         }
     }
 }

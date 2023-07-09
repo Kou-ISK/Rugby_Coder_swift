@@ -15,6 +15,9 @@ struct StartView: View {
     @State var urlString: String?
     @State var urlString2: String?
     @State var startCoding: Bool = false
+    @State var player1:AVPlayer?
+    @State var player2:AVPlayer?
+    
     var body: some View {
         if(!startCoding){
             VStack {
@@ -61,16 +64,17 @@ struct StartView: View {
                 VStack{
                     HStack{
                         if(urlString != nil){
-                            VideoPlayer(player: AVPlayer(url:URL(string:urlString!)!))
+                            VideoView(player:AVPlayer(url:URL(string:urlString!)!))
                                 .frame(minWidth:200,minHeight:200)
                         }
                         if(urlString2 != nil){
-                            VideoPlayer(player: AVPlayer(url:URL(string:urlString2!)!))
+                            VideoView(player:AVPlayer(url:URL(string:urlString2!)!))
                                 .frame(minWidth:200,minHeight:200)
                         }
                     }
                     TimeLineView()
                         .frame(minWidth:200,minHeight:200)
+                    
                 }
                 CodeWindowView()
                     .frame(width:200,height:300)

@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import _AVKit_SwiftUI
 // インスタンスを表示させる
 struct TimeLineView: View {
     @EnvironmentObject var modelData:ModelData
+    
     var body: some View {
         Table(modelData.timeline){
             TableColumn("Start Time"){ timelineData in
-                Text(String(timelineData.startTime))
+                Button(action:{
+                    print(timelineData.startTime)
+                }){Text(String(timelineData.startTime))}
             }
             TableColumn("End Time"){ timelineData in
                 Text(String(timelineData.endTime))

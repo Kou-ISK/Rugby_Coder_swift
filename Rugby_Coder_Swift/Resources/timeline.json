@@ -1,15 +1,15 @@
 [
     {
-        "startTime": "1time",
+        "startTime": "130",
         "id": 1001,
-        "endTime": "2time",
+        "endTime": "200",
         "actionName": "Tackle",
         "qualifier": "qualifier"
     },
     {
-        "startTime": "4time",
+        "startTime": "230",
         "id": 1002,
-        "endTime": "10time",
+        "endTime": "300",
         "actionName": "2nd action",
         "qualifier": "qualifier"
     }

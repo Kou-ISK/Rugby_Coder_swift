@@ -10,6 +10,7 @@
 		781377F32A51A3FD00F3C851 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781377F22A51A3FD00F3C851 /* StartView.swift */; };
 		781377F52A51AA8600F3C851 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781377F42A51AA8600F3C851 /* ModelData.swift */; };
 		781377F82A53058200F3C851 /* timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 781377F72A53058200F3C851 /* timeline.json */; };
+		781377FA2A5ACD7400F3C851 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781377F92A5ACD7400F3C851 /* VideoView.swift */; };
 		78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */; };
 		78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D88119293CC2870046C8E1 /* ContentView.swift */; };
 		78D8811C293CC2880046C8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D8811B293CC2880046C8E1 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		781377F22A51A3FD00F3C851 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		781377F42A51AA8600F3C851 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		781377F72A53058200F3C851 /* timeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline.json; sourceTree = "<group>"; };
+		781377F92A5ACD7400F3C851 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		78D88114293CC2870046C8E1 /* Rugby_Coder_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rugby_Coder_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D88117293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rugby_Coder_SwiftApp.swift; sourceTree = "<group>"; };
 		78D88119293CC2870046C8E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				78D8814C293F7D930046C8E1 /* CodeWindowView.swift */,
+				781377F92A5ACD7400F3C851 /* VideoView.swift */,
 				78D8816129474F220046C8E1 /* TimeLineView.swift */,
 				781377F22A51A3FD00F3C851 /* StartView.swift */,
 			);
@@ -322,6 +325,7 @@
 				78D8815C293F82370046C8E1 /* Timeline.swift in Sources */,
 				781377F52A51AA8600F3C851 /* ModelData.swift in Sources */,
 				781377F32A51A3FD00F3C851 /* StartView.swift in Sources */,
+				781377FA2A5ACD7400F3C851 /* VideoView.swift in Sources */,
 				78D8814D293F7D930046C8E1 /* CodeWindowView.swift in Sources */,
 				78D8811A293CC2870046C8E1 /* ContentView.swift in Sources */,
 				78D88118293CC2870046C8E1 /* Rugby_Coder_SwiftApp.swift in Sources */,
